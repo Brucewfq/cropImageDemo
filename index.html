@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>crop-image-demo</title>
+    <link type="text/css" href="src/css/index.css" rel="stylesheet">
+</head>
+<body>
+<div class="crop-container">
+    <img src="./src/images/1.jpg" alt="" id="originImage">
+    <div class="crop-box" id="cropBox">
+        <!--<div class="box-border"></div>-->
+
+        <div class="box-handle box-handle1" id="box_1"></div>
+        <div class="box-handle box-handle2" id="box_2"></div>
+        <div class="box-handle box-handle3" id="box_3"></div>
+        <div class="box-handle box-handle4" id="box_4"></div>
+        <div class="box-handle box-handle5" id="box_5"></div>
+        <div class="box-handle box-handle6" id="box_6"></div>
+        <div class="box-handle box-handle7" id="box_7"></div>
+        <div class="box-handle box-handle8" id="box_8"></div>
+    </div>
+
+    <div class="outer top"></div>
+    <div class="outer right"></div>
+    <div class="outer bottom"></div>
+    <div class="outer left"></div>
+
+    <div class="crop-btn">裁剪</div>
+    <div class="confirm-btn">确定</div>
+</div>
+
+<script type="text/javascript" src="src/js/index.js"></script>
+<script type="text/javascript">
+    var image = document.getElementById('originImage');
+    var cropBox = document.getElementById('cropBox');
+    var shadow = document.getElementsByClassName("outer");
+
+    var cropImage = new CropImage(image, cropBox, shadow);
+
+    var cropBtn = document.getElementsByClassName("crop-btn")[0];
+    cropBtn.addEventListener("click", function () {
+        cropImage.crop();
+    });
+</script>
+
+</body>
+</html>

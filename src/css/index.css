@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #454545;
+}
+
+.crop-container {
+}
+
+.crop-container img {
+    width: 500px;
+    margin: 50px auto;
+    display: block;
+    user-select: none;
+}
+
+.crop-box {
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    z-index: 2;
+    border: 1px dashed #ffffff;
+    box-sizing: border-box;
+
+}
+
+.box-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px dashed #ffffff;
+    opacity: 0.5;
+    box-sizing: border-box;
+}
+
+.outer {
+    overflow: hidden;
+    background: #000;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.box-handle1 {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.box-handle2 {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.box-handle3 {
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+}
+
+.box-handle4 {
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+}
+
+.box-handle5 {
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.box-handle6 {
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.box-handle7 {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.box-handle8 {
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.box-handle {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.confirm-btn {
+    width: 80px;
+    height: 35px;
+    color: #ffffff;
+    margin: 10px;
+}
+
+.crop-btn {
+    color: #ffffff;
+    width: 80px;
+    height: 35px;
+    margin: 10px;
+}
